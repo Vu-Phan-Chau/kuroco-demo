@@ -22,10 +22,10 @@ jobs:
           echo "::set-output name=sha::$(echo $PR | jq -r '.sha')"
       - name: Checkout Repo
         uses: actions/checkout@v2
-      - name: Copy kuroco_front.json
-        run: cp src/static/kuroco_front_dev.json src/static/kuroco_front.json
         with:
           ref: ${{ steps.get_branch.outputs.branch }}
+      - name: Copy kuroco_front.json
+        run: cp src/static/kuroco_front_dev.json src/static/kuroco_front.json
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
