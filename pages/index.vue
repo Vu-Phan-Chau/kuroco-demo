@@ -1,7 +1,7 @@
 <template>
   <div>
     <Tutorial />
-    <p>Develop</p>
+    <p>Master</p>
   </div>
 </template>
 
