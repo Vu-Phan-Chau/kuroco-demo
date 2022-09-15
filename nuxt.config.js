@@ -40,8 +40,23 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxtjs/axios'],
+
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  axios: {
+    proxy: true,
+    credentials: true,
+    withCredentials: true
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  privateRuntimeConfig: {
+    apiSecret: envSettings.API_SECRET
+  },
+
+  publicRuntimeConfig: {
+    baseURL: envSettings.BASE_URL
+  }
 }
