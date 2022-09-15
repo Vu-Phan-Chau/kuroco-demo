@@ -25,7 +25,7 @@ jobs:
         with:
           ref: ${{ steps.get_branch.outputs.branch }}
       - name: Copy kuroco_front.json
-        run: cp src/static/kuroco_front_dev.json src/static/kuroco_front.json
+        run: cp /static/kuroco_front_dev.json /static/kuroco_front.json
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
