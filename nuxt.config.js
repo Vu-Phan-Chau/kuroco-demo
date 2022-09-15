@@ -1,13 +1,20 @@
+const environment = process.env.NODE_ENV;
+const envSettings = require(`./env.${environment}.js`);
+
 export default {
+  env: envSettings,
+
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'kuroco-maskcode',
+    // title: 'kuroco-maskcode',
     htmlAttrs: {
       lang: 'en',
     },
+    titleTemplate: '%s - ',
+    title: envSettings.META_TITLE,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
