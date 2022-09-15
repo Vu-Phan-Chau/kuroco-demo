@@ -5,10 +5,10 @@
   "scripts": {
     "dev": "nuxt",
     "start": "nuxt start",
-    "build": "cross-env NODE_ENV=development nuxt build",
-    "generate": "cross-env NODE_ENV=development nuxt generate",
-    "build-prod": "cross-env NODE_ENV=production nuxt build",
-    "generate-prod": "cross-env NODE_ENV=production nuxt generate",
+    "build": "node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development nuxt build",
+    "generate": "node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development nuxt generate",
+    "build-prod": "node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production nuxt build",
+    "generate-prod": "node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production nuxt generate",
     "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
     "lint:prettier": "prettier --check .",
     "lint": "npm run lint:js && npm run lint:prettier",
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "core-js": "^3.19.3",
+    "cross-env": "^7.0.3",
     "nuxt": "^2.15.8",
     "vue": "^2.6.14",
     "vue-server-renderer": "^2.6.14",
