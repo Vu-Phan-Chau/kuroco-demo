@@ -6,7 +6,7 @@ on:
   issue_comment:
     types: [created, edited]
   workflow_dispatch:
-    branches: [ develop ]
+    branches: develop
 jobs:
   # for Pull Request (exclude merged)
   pullreq_build:
