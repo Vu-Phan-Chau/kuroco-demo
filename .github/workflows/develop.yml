@@ -61,6 +61,9 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
+      - run: |
+          echo "Log $workflow_dispatch: $workflow_dispatch"
+          echo "Log workflow_dispatch: workflow_dispatch"
       - name: Copy kuroco_front.json
         run: cp static/kuroco_front_dev.json static/kuroco_front.json
       - name: Use Node.js
