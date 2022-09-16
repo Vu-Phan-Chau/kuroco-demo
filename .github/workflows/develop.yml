@@ -65,6 +65,7 @@ jobs:
           echo "Log github.event_name: ${{ github.event_name }}"
           echo "Log GITHUB_REF: $GITHUB_REF"
           echo "Log github.ref: ${{ github.ref }}"
+          echo "Environment: $ENVIRONMENT"
       - name: Copy kuroco_front.json
         run: cp static/kuroco_front_dev.json static/kuroco_front.json
       - name: Use Node.js
