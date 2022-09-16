@@ -1,8 +1,6 @@
 <template>
   <div>
     <Tutorial />
-    <p>Master</p>
-    <p>Develop</p>
   </div>
 </template>
 
